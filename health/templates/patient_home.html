@@ -1,0 +1,147 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block body %}
+    <br/>
+    <hr>
+    <div class="container-fluid" style="margin-top:100px;margin-bottom:2%;width:100%">
+        <h4 align="center" style="font-weight:bold;font-family:roman">Features </h4><hr/>
+        <br>
+        <center>
+            <h5 class="col-lg-7 w3ls_footer_grid1_left text-lg-left text-center" style="color:rgb(15, 115, 230)">keep navigate to each features and their range values, to understand its explanations</h5>
+            <h6 class="col-lg-7 w3ls_footer_grid1_left text-lg-left text-center" style="color:rgb(15, 115, 230)">You should pass the 12 feature for know the status of fetal</h6>
+        </center>
+        <div class="container-fluid" style="margin-top: 100px; margin-bottom: 2%; width: 100%;">
+            <div class="">
+                <br/>
+                <hr>
+                <p>
+                    This system  use  records of features extracted from Cardiotocogram exams,
+                     which were then classified by expert obstetrician into 3 classes:<br/>
+                    "Normal", "Suspect" & "Pathological". Data having the following features:
+                </p>
+                <ul>
+                    <li>baseline value: Baseline Fetal Heart Rate (FHR) (beats per minute)</li>
+                    <li>accelerations: Number of accelerations per second</li>
+                    <li>uterine_contractions: Number of uterine contractions per second</li>
+                    <li>light_decelerations: Number of light decelerations (LDs) per second</li>
+                    <li>severe_decelerations: Number of severe decelerations (SDs) per second</li>
+                    <li>prolongued_decelerations: Number of prolonged decelerations (PDs) per second</li>
+                    <li>abnormal_short_term_variability: Percentage of time with abnormal short term variability</li>
+                    <li>mean_value_of_short_term_variability: Mean value of short term variability</li>
+                    <li>percentage_of_time_with_abnormal_long_term_variability: Percentage of time with abnormal long term
+                        variability</li>
+                    <li>histogram_min: Histogram minimum value</li>
+                    <li>histogram_mean: Histogram mean</li>
+                    <li>histogram_variance: Histogram variance</li>
+                </ul>
+                <p>fetal_health: Encoded as 0-Normal; 1-Suspect; 2-Pathological</p>
+            </div>
+            <hr>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Range</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Severe decelerations (number of severe decelerations per second)</td>
+                            <td>0–0.001</td>
+                        </tr>
+                        <tr>
+                            <td>Prolonged decelerations (number of prolonged decelerations per second)</td>
+                            <td>0–0.005</td>
+                        </tr>
+                        <tr>
+                            <td>Abnormal short-term variability (percentage of time with abnormal short-term variability)</td>
+                            <td>12–87</td>
+                        </tr>
+                        <tr>
+                            <td>Mean value of short-term variability</td>
+                            <td>7–0.2</td>
+                        </tr>
+                        <tr>
+                            <td>Percentage of time with abnormal long-term variability</td>
+                            <td>0–91</td>
+                        </tr>
+                        <tr>
+                            <td>Mean value of long-term variability</td>
+                            <td>0–50.7</td>
+                        </tr>
+                        <tr>
+                            <td>Width of FHR histogram</td>
+                            <td>3–180</td>
+                        </tr>
+                        <tr>
+                            <td>Minimum of FHR histogram</td>
+                            <td>50–159</td>
+                        </tr>
+                        <tr>
+                            <td>Maximum of FHR histogram</td>
+                            <td>122–238</td>
+                        </tr>
+                        <tr>
+                            <td>Histogram peaks</td>
+                            <td>0–18</td>
+                        </tr>
+                        <tr>
+                            <td>Histogram zeros</td>
+                            <td>0–10</td>
+                        </tr>
+                        <tr>
+                            <td>Histogram mode</td>
+                            <td>60–187</td>
+                        </tr>
+                        <tr>
+                            <td>Histogram mean</td>
+                            <td>73–182</td>
+                        </tr>
+                        <tr>
+                            <td>Histogram median</td>
+                            <td>77–186</td>
+                        </tr>
+                        <tr>
+                            <td>Histogram variance</td>
+                            <td>0–269</td>
+                        </tr>
+                        <tr>
+                            <td>Histogram tendency</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>FHR pattern class code (1 to 10)</td>
+                            <td>1–10</td>
+                        </tr>
+                        <tr>
+                            <td>FHR baseline (beats per minute)</td>
+                            <td>(160–106)</td>
+                        </tr>
+                        <tr>
+                            <td>Accelerations per second</td>
+                            <td>(0–0.019)</td>
+                        </tr>
+                        <tr>
+                            <td>Fetal movement (number of fetal movement)</td>
+                            <td>(0–0.481)</td>
+                        </tr>
+                        <tr>
+                            <td>Uterine contractions (number of uterine contractions per second)</td>
+                            <td>(0–0.015)</td>
+                        </tr>
+                        <tr>
+                            <td>Light decelerations (number of light decelerations per second)</td>
+                            <td>(0–0.015)</td>
+                        </tr>
+                        <tr>
+                            <td>Fetal health (Fetal state class code, N=Normal, S=Suspected, P=Pathological)</td>
+                            <td>1-Normal, 2-Needs Reassurance, 3-Pathological</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block body %}
+<center>
+	<section class="logins py-5">
+		<h1>Prediction Result</h1>
+		<p>Prediction: {{ prediction }}</p>
+		<div id="explanation">
+			{{ explanation|safe }}
+		</div>
+	</section>
+</center>
+{% endblock %}
